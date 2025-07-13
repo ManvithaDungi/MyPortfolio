@@ -1,0 +1,267 @@
+/*about.css*/
+:root {
+  --dark-color: hsl(217, 44%, 17%);
+  --accent-color: #cce1ff;
+  --highlight-color: #1bf392;
+  --heading-color: #ffffff; /* changed from #31e8f9 to plain white */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--accent-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.wrapper {
+  max-width: 75rem;
+  padding: 1.5rem;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: var(--highlight-color);
+}
+
+.menu-items {
+  display: flex;
+  gap: 3.75rem;
+  text-transform: uppercase;
+}
+
+.menu-items a {
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: var(--highlight-color);
+}
+
+.hero {
+  margin-top: 6rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+  color: var(--heading-color); /* plain white */
+  font-weight: 700;
+  text-align: center;
+}
+
+h2.section-title {
+  font-size: 3rem;
+  color: var(--heading-color); /* plain white */
+  text-align: left;
+  margin: 3rem 0 2rem;
+}
+
+.education-section {
+  margin: 6rem 0;
+}
+
+.education-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--highlight-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.edu-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.edu-details h3 {
+  font-size: 2rem;
+  color: var(--heading-color); /* plain white */
+  margin-bottom: 0.5rem;
+}
+
+.edu-details p {
+  color: var(--accent-color);
+  margin: 0.3rem 0;
+  font-size: 1.4rem;
+}
+
+.edu-details ul {
+  margin-top: 0.8rem;
+  padding-left: 1.5rem;
+}
+
+.edu-details ul li {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--accent-color);
+}
+
+.achievements {
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid var(--highlight-color);
+  border-radius: 1rem;
+}
+
+.achievement {
+  margin-bottom: 2.5rem;
+}
+
+.achievement h3 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--heading-color); /* plain white */
+}
+
+.achievement p {
+  font-size: 1.4rem;
+  line-height: 2;
+  color: var(--accent-color);
+}
+
+/* STACK ICONS (no glow, no border) */
+.stack-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.stack-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 6px;
+  border: none;
+  box-shadow: none;
+}
+
+.stack-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* CERTIFICATE LINK (no glow) */
+.glow-link {
+  color: var(--highlight-color);
+  font-weight: bold;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.glow-link:hover {
+  text-shadow: none;
+  transform: scale(1.03);
+}
+
+.click-note {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  opacity: 0.7;
+  margin-top: 0.3rem;
+}
+
+.sub-heading {
+  font-size: 1.8rem;
+  color: var(--heading-color); /* plain white */
+  margin-top: 1.5rem;
+}
+/* ========== Small devices (phones, <600px) ========== */
+@media (max-width: 600px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-section {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .menu-items a {
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  h2.role {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 1rem;
+  }
+
+  .contact-container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+}

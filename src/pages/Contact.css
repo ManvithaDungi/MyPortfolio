@@ -1,0 +1,229 @@
+/*contact.css*/
+:root {
+  --dark-color: #0b1d36;
+  --accent-color: #cce1ff;
+  --highlight-color: #1bf392;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--accent-color);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 75rem;
+  padding: 1.5rem;
+  margin: auto;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: var(--highlight-color);
+}
+
+.menu-items {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.menu-items a:hover {
+  color: var(--accent-color);
+}
+
+.contact-section h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  white-space: nowrap;
+}
+
+.contact-section p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  opacity: 0.9;
+  text-align: left;
+}
+
+.contact-method {
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.contact-method strong {
+  display: inline-block;
+  width: 90px;
+}
+/* New nav bar consistency fix */
+.navbar {
+  background-color: var(--dark-color);
+  padding: 1.5rem 0;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: var(--highlight-color);
+}
+
+.menu-items {
+  display: flex;
+  gap: 3rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.menu-items a:hover {
+  color: var(--accent-color);
+}
+
+/* Contact container specific tweak */
+.contact-container {
+  max-width: 420px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 12px rgba(0, 255, 180, 0.03);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #0f1c2e;
+  color: #cce1ff;
+}
+
+.contact-form button {
+  background-color: #1bf392;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #14d281;
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+/* ========== Small devices (phones, <600px) ========== */
+@media (max-width: 600px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-section {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .menu-items a {
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  h2.role {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 1rem;
+  }
+
+  .contact-container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+}
