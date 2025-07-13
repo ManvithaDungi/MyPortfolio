@@ -1,10 +1,10 @@
-/*style.css*/
 :root {
   --dark-color: hsl(217, 44%, 17%);
   --accent-color: #cce1ff;
   --highlight-color: #1bf392;
 }
 
+/* Reset & Base Styles */
 *,
 *::before,
 *::after {
@@ -14,7 +14,6 @@
 }
 
 html {
-  font-family: Verdana;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -29,7 +28,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: white;
   transition: color 0.3s ease-in-out;
 }
 
@@ -39,29 +38,39 @@ a {
   margin: auto;
 }
 
+/* ========== NAVIGATION ========== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: white;
 }
 
 .logo {
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
-  color: #fff;
+  color: var(--highlight-color);
 }
 
 .menu-items {
   display: flex;
   gap: 3.75rem;
   text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.menu-items a {
+  font-weight: 500;
 }
 
 .menu-items a:hover {
   color: var(--highlight-color);
 }
 
+/* ========== HERO SECTION ========== */
 .hero {
   margin-top: 6.25rem;
   position: relative;
@@ -96,11 +105,11 @@ nav {
   margin-bottom: 2rem;
 }
 
+/* Headings */
 h1 {
   font-size: 4.5rem;
   margin-bottom: 1rem;
   color: #ffffff;
-  line-height: 1.2;
   font-weight: 700;
   letter-spacing: 0.05rem;
   word-spacing: 0.1rem;
@@ -125,7 +134,7 @@ h3 {
   opacity: 0.9;
 }
 
-/* Social Icons */
+/* ========== SOCIALS ========== */
 .socials {
   display: flex;
   gap: 1.5rem;
@@ -141,14 +150,13 @@ h3 {
 
 .github-icon {
   width: 60px;
-  height: auto;
 }
 
 .socials img:hover {
   transform: scale(1.1);
 }
 
-/* Quote boxes */
+/* ========== QUOTES ========== */
 .quote-box {
   background-color: rgba(255, 255, 255, 0.08);
   border-left: 6px solid var(--highlight-color);
@@ -169,14 +177,7 @@ h3 {
   max-width: 500px;
 }
 
-.tagline-box {
-  font-size: 2rem;
-  font-weight: bold;
-  font-style: normal;
-  color: var(--accent-color);
-  text-align: center;
-}
-
+/* ========== BUTTONS ========== */
 .btn {
   display: inline-flex;
   background-color: white;
@@ -197,12 +198,11 @@ h3 {
 }
 
 .btn .icon {
-  display: flex;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-/* Tech Stack Icons */
+/* ========== TECH STACK ICONS ========== */
 .stack-icons {
   display: flex;
   flex-wrap: wrap;
@@ -222,6 +222,7 @@ h3 {
   transform: scale(1.1);
 }
 
+/* ========== PROFILE ========== */
 .profile-container {
   display: flex;
   justify-content: center;
@@ -243,7 +244,8 @@ h3 {
 .profile-pic:hover {
   transform: scale(1.05);
 }
-/* ========== Small devices (phones, <600px) ========== */
+
+/* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 600px) {
   .hero-content {
     flex-direction: column;
@@ -291,8 +293,7 @@ h3 {
     width: 150px;
     height: 150px;
   }
-}
-@media (max-width: 600px) {
+
   .wrapper {
     padding: 1rem;
   }

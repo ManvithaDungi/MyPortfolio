@@ -7,30 +7,32 @@ function Home() {
   return (
     <div className="wrapper">
 
-<nav>
+<nav className="navbar">
   <Link to="/" className="logo">My Portfolio</Link>
   <div className="menu-items">
+    <Link to="/">Home</Link>
     <Link to="/about">About</Link>
     <Link to="/projects">Projects</Link>
     <Link to="/contact">Contact</Link>
   </div>
 </nav>
 
+
       <header className="hero">
         <div className="hero-content">
           <div className="left-section">
             <div className="socials">
               <a href="https://github.com/ManvithaDungi">
-                <img src="/images/github.png" alt="GitHub" className="github-icon" />
+                <img src="images/github.png" alt="GitHub" className="github-icon" />
               </a>
               <a href="https://www.linkedin.com/in/manvitha-dungi-8a8040211/">
-                <img src="/images/linkedin-logo.png" alt="LinkedIn" />
+                <img src="images/linkedin-logo.png" alt="LinkedIn" />
               </a>
               <a href="mailto:manvitha3626@gmail.com">
-                <img src="/images/gmail-logo.png" alt="Email" />
+                <img src="images/gmail-logo.png" alt="Email" />
               </a>
               <a href="https://leetcode.com/u/manvitha_dungi/">
-                <img src="/images/leetcode-icon.png" alt="LeetCode" />
+                <img src="images/leetcode-icon.png" alt="LeetCode" />
               </a>
             </div>
 
@@ -52,13 +54,13 @@ function Home() {
 
             <a href="#" className="btn">
               Download Resume
-              <span className="icon"><img src="/images/right-arrow.svg" alt="Arrow" /></span>
+              <span className="icon"><img src="./images/right-arrow.svg" alt="Arrow" /></span>
             </a>
           </div>
 
           <div className="right-side">
             <div className="profile-container">
-              <img src="/images/profile.jpeg" alt="Profile" className="profile-pic" />
+              <img src="images/profile.jpeg" alt="Profile" className="profile-pic" />
             </div>
 
             <div className="right-section achievements">
@@ -78,11 +80,11 @@ function Home() {
               <div className="tech-stack">
                 <h3>Tech Stack</h3>
                 <div className="stack-icons">
-                  <img src="/images/react-icon.png" alt="React" />
-                  <img src="/images/nodejs-icon.png" alt="Node.js" />
-                  <img src="/images/mongodb-icon.png" alt="MongoDB" />
-                  <img src="/images/js-icon.png" alt="JavaScript" />
-                  <img src="/images/python-icon.png" alt="Python" />
+                  <img src="./images/react-icon.png" alt="React" />
+                  <img src="./images/nodejs-icon.png" alt="Node.js" />
+                  <img src="./images/mongodb-icon.png" alt="MongoDB" />
+                  <img src="./images/js-icon.png" alt="JavaScript" />
+                  <img src="./images/python-icon.png" alt="Python" />
                 </div>
               </div>
             </div>

@@ -1,11 +1,11 @@
-/*about.css*/
 :root {
   --dark-color: hsl(217, 44%, 17%);
   --accent-color: #cce1ff;
   --highlight-color: #1bf392;
-  --heading-color: #ffffff; /* changed from #31e8f9 to plain white */
+  --heading-color: #ffffff;
 }
 
+/* Reset & Base */
 *,
 *::before,
 *::after {
@@ -31,19 +31,17 @@ body {
 a {
   text-decoration: none;
   color: var(--accent-color);
+  transition: color 0.3s ease;
 }
 
-.wrapper {
-  max-width: 75rem;
-  padding: 1.5rem;
-  margin: auto;
-}
-
-nav {
+/* Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1rem;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: white;
 }
 
 .logo {
@@ -57,36 +55,46 @@ nav {
   display: flex;
   gap: 3.75rem;
   text-transform: uppercase;
+  font-size: 1.4rem;
 }
 
 .menu-items a {
-  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
 }
 
 .menu-items a:hover {
-  color: var(--highlight-color);
+  color: #f0a500;
+}
+
+/* Layout */
+.wrapper {
+  max-width: 75rem;
+  padding: 1.5rem;
+  margin: auto;
 }
 
 .hero {
   margin-top: 6rem;
-  position: relative;
 }
 
 h1 {
   font-size: 4.5rem;
   margin-bottom: 2rem;
-  color: var(--heading-color); /* plain white */
+  color: var(--heading-color);
   font-weight: 700;
   text-align: center;
 }
 
 h2.section-title {
   font-size: 3rem;
-  color: var(--heading-color); /* plain white */
+  color: var(--heading-color);
   text-align: left;
   margin: 3rem 0 2rem;
 }
 
+/* Education */
 .education-section {
   margin: 6rem 0;
 }
@@ -113,7 +121,7 @@ h2.section-title {
 
 .edu-details h3 {
   font-size: 2rem;
-  color: var(--heading-color); /* plain white */
+  color: var(--heading-color);
   margin-bottom: 0.5rem;
 }
 
@@ -134,6 +142,7 @@ h2.section-title {
   color: var(--accent-color);
 }
 
+/* Achievements */
 .achievements {
   margin-top: 5rem;
   padding: 2rem;
@@ -149,7 +158,7 @@ h2.section-title {
 .achievement h3 {
   font-size: 2rem;
   margin-bottom: 0.8rem;
-  color: var(--heading-color); /* plain white */
+  color: var(--heading-color);
 }
 
 .achievement p {
@@ -158,7 +167,7 @@ h2.section-title {
   color: var(--accent-color);
 }
 
-/* STACK ICONS (no glow, no border) */
+/* Tech Stack Icons */
 .stack-icons {
   display: flex;
   flex-wrap: wrap;
@@ -181,7 +190,7 @@ h2.section-title {
   transform: scale(1.1);
 }
 
-/* CERTIFICATE LINK (no glow) */
+/* Certificate Links */
 .glow-link {
   color: var(--highlight-color);
   font-weight: bold;
@@ -190,7 +199,6 @@ h2.section-title {
 }
 
 .glow-link:hover {
-  text-shadow: none;
   transform: scale(1.03);
 }
 
@@ -203,20 +211,14 @@ h2.section-title {
 
 .sub-heading {
   font-size: 1.8rem;
-  color: var(--heading-color); /* plain white */
+  color: var(--heading-color);
   margin-top: 1.5rem;
 }
-/* ========== Small devices (phones, <600px) ========== */
-@media (max-width: 600px) {
-  .hero-content {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .right-section {
-    max-width: 100%;
-    width: 100%;
-    margin-top: 2rem;
+/* Responsive */
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 1rem;
   }
 
   .menu-items {
@@ -235,33 +237,18 @@ h2.section-title {
     text-align: center;
   }
 
-  h2.role {
-    font-size: 1.8rem;
+  h2.section-title {
+    font-size: 2rem;
     text-align: center;
   }
 
-  .btn {
-    width: 100%;
-    justify-content: center;
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .socials {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-  }
-}
-@media (max-width: 600px) {
-  .wrapper {
-    padding: 1rem;
-  }
-
-  .contact-container {
-    margin: 2rem auto;
-    padding: 1.5rem;
+  .edu-logo {
+    margin-bottom: 1rem;
   }
 }

@@ -6,14 +6,16 @@ import './About.css';
 function About() {
   return (
     <div className="wrapper">
-<nav>
+      <nav className="navbar">
   <Link to="/" className="logo">My Portfolio</Link>
   <div className="menu-items">
+    <Link to="/">Home</Link>
     <Link to="/about">About</Link>
     <Link to="/projects">Projects</Link>
     <Link to="/contact">Contact</Link>
   </div>
 </nav>
+
 
       <header className="hero">
         <h1>About Me</h1>
@@ -22,7 +24,7 @@ function About() {
         <section className="education-section">
           <h2 className="section-title">My Education</h2>
           <div className="education-card">
-            <img src="./images/amrita-logo.svg" alt="University Logo" className="edu-logo" />
+            <img src={`${process.env.PUBLIC_URL}/images/amrita-logo.svg`} alt="University Logo" className="edu-logo" />
             <div className="edu-details">
               <h3>Bachelor of Technology in Computer Science</h3>
               <p>Amrita Vishwa Vidyapeetham</p>
@@ -42,24 +44,24 @@ function About() {
           <div className="achievement">
             <p><strong className="sub-heading">Programming Languages:</strong></p>
             <div className="stack-icons">
-              <img src="./images/python-icon.png" alt="Python" />
-              <img src="./images/c-icon.png" alt="C++" />
-              <img src="./images/java-icon.png" alt="Java" />
-              <img src="./images/matlab-icon.png" alt="Matlab" />
-              <img src="./images/haskell-icon.png" alt="Haskell" />
-              <img src="./images/sql-icon.png" alt="SQL" />
-              <img src="./images/html-icon.png" alt="HTML" />
-              <img src="./images/react-icon.png" alt="React" />
-              <img src="./images/nodejs-icon.png" alt="Node.js" />
-              <img src="./images/mongodb-icon.png" alt="MongoDB" />
-              <img src="./images/js-icon.png" alt="JavaScript" />
+              <img src={`${process.env.PUBLIC_URL}/images/python-icon.png`} alt="Python" />
+              <img src={`${process.env.PUBLIC_URL}/images/c-icon.png`} alt="C++" />
+              <img src={`${process.env.PUBLIC_URL}/images/java-icon.png`} alt="Java" />
+              <img src={`${process.env.PUBLIC_URL}/images/matlab-icon.png`} alt="Matlab" />
+              <img src={`${process.env.PUBLIC_URL}/images/haskell-icon.png`} alt="Haskell" />
+              <img src={`${process.env.PUBLIC_URL}/images/sql-icon.png`} alt="SQL" />
+              <img src={`${process.env.PUBLIC_URL}/images/html-icon.png`} alt="HTML" />
+              <img src={`${process.env.PUBLIC_URL}/images/react-icon.png`} alt="React" />
+              <img src={`${process.env.PUBLIC_URL}/images/nodejs-icon.png`} alt="Node.js" />
+              <img src={`${process.env.PUBLIC_URL}/images/mongodb-icon.png`} alt="MongoDB" />
+              <img src={`${process.env.PUBLIC_URL}/images/js-icon.png`} alt="JavaScript" />
             </div>
 
             <p><strong className="sub-heading">Certifications:</strong></p>
             <ul>
               <li>
                 <span>Programming in Java</span>
-                <a href="./assets/certificate1.pdf"
+                <a href="/certificates/certificate1.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="glow-link"

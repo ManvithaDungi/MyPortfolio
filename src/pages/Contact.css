@@ -1,4 +1,3 @@
-/*contact.css*/
 :root {
   --dark-color: #0b1d36;
   --accent-color: #cce1ff;
@@ -37,12 +36,13 @@ a {
   margin: auto;
 }
 
-
-nav {
+/* ========== NAVIGATION ========== */
+.navbar {
+  background-color: var(--dark-color);
+  padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 2rem;
 }
 
 .logo {
@@ -54,15 +54,21 @@ nav {
 
 .menu-items {
   display: flex;
-  gap: 2rem;
-  font-size: 1.4rem;
+  gap: 3rem;
   text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.menu-items a {
+  color: white;
+  font-weight: 500;
 }
 
 .menu-items a:hover {
   color: var(--accent-color);
 }
 
+/* ========== CONTACT SECTION ========== */
 .contact-section h1 {
   font-size: 2.8rem;
   color: #fff;
@@ -89,37 +95,7 @@ nav {
   display: inline-block;
   width: 90px;
 }
-/* New nav bar consistency fix */
-.navbar {
-  background-color: var(--dark-color);
-  padding: 1.5rem 0;
-}
 
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.125rem;
-  color: var(--highlight-color);
-}
-
-.menu-items {
-  display: flex;
-  gap: 3rem;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-}
-
-.menu-items a:hover {
-  color: var(--accent-color);
-}
-
-/* Contact container specific tweak */
 .contact-container {
   max-width: 420px;
   margin: 5rem auto;
@@ -162,13 +138,12 @@ nav {
   background-color: #14d281;
 }
 
-
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #ccc;
 }
 
-/* ========== Small devices (phones, <600px) ========== */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
   .hero-content {
     flex-direction: column;
@@ -216,8 +191,7 @@ nav {
     width: 150px;
     height: 150px;
   }
-}
-@media (max-width: 600px) {
+
   .wrapper {
     padding: 1rem;
   }

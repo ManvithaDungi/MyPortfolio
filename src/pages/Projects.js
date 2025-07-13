@@ -7,14 +7,16 @@ function Projects() {
   return (
     <div className="wrapper">
 
-<nav>
+<nav className="navbar">
   <Link to="/" className="logo">My Portfolio</Link>
   <div className="menu-items">
+    <Link to="/">Home</Link>
     <Link to="/about">About</Link>
     <Link to="/projects">Projects</Link>
     <Link to="/contact">Contact</Link>
   </div>
 </nav>
+
 
       <header className="hero">
         <h1>Projects</h1>
