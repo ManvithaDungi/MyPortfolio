@@ -22,7 +22,7 @@ function About() {
         <section className="education-section">
           <h2 className="section-title">My Education</h2>
           <div className="education-card">
-            <img src="/images/amrita-logo.svg" alt="University Logo" className="edu-logo" />
+            <img src="./images/amrita-logo.svg" alt="University Logo" className="edu-logo" />
             <div className="edu-details">
               <h3>Bachelor of Technology in Computer Science</h3>
               <p>Amrita Vishwa Vidyapeetham</p>
@@ -42,24 +42,24 @@ function About() {
           <div className="achievement">
             <p><strong className="sub-heading">Programming Languages:</strong></p>
             <div className="stack-icons">
-              <img src="/images/python-icon.png" alt="Python" />
-              <img src="/images/c-icon.png" alt="C++" />
-              <img src="/images/java-icon.png" alt="Java" />
-              <img src="/images/matlab-icon.png" alt="Matlab" />
-              <img src="/images/haskell-icon.png" alt="Haskell" />
-              <img src="/images/sql-icon.png" alt="SQL" />
-              <img src="/images/html-icon.png" alt="HTML" />
-              <img src="/images/react-icon.png" alt="React" />
-              <img src="/images/nodejs-icon.png" alt="Node.js" />
-              <img src="/images/mongodb-icon.png" alt="MongoDB" />
-              <img src="/images/js-icon.png" alt="JavaScript" />
+              <img src="./images/python-icon.png" alt="Python" />
+              <img src="./images/c-icon.png" alt="C++" />
+              <img src="./images/java-icon.png" alt="Java" />
+              <img src="./images/matlab-icon.png" alt="Matlab" />
+              <img src="./images/haskell-icon.png" alt="Haskell" />
+              <img src="./images/sql-icon.png" alt="SQL" />
+              <img src="./images/html-icon.png" alt="HTML" />
+              <img src="./images/react-icon.png" alt="React" />
+              <img src="./images/nodejs-icon.png" alt="Node.js" />
+              <img src="./images/mongodb-icon.png" alt="MongoDB" />
+              <img src="./images/js-icon.png" alt="JavaScript" />
             </div>
 
             <p><strong className="sub-heading">Certifications:</strong></p>
             <ul>
               <li>
                 <span>Programming in Java</span>
-                <a href="/certificates/certificate1.pdf"
+                <a href="./assets/certificate1.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="glow-link"
