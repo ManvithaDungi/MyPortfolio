@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import './Contact.css';
 
 function Contact() {
@@ -40,46 +39,16 @@ function Contact() {
       </div>
 
       <div className="wrapper contact-container">
-        <motion.section
-          className="contact-section"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Contact Me
-          </motion.h1>
+        <section className="contact-section">
+          <h1>Contact Me</h1>
+          <p>If you'd like to get in touch, feel free to reach out through the following:</p>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            If you'd like to get in touch, feel free to reach out through the following:
-          </motion.p>
-
-          {/* Contact Methods */}
-          <motion.div
-            className="contact-method"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
+          <div className="contact-method">
             <strong>Email:</strong>
             <a href="mailto:manvitha3626@gmail.com">manvitha3626@gmail.com</a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="contact-method"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
+          <div className="contact-method">
             <strong>LinkedIn:</strong>
             <a
               href="https://www.linkedin.com/in/manvitha-dungi-8a8040211/"
@@ -88,14 +57,9 @@ function Contact() {
             >
               LinkedIn Profile
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="contact-method"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-          >
+          <div className="contact-method">
             <strong>GitHub:</strong>
             <a
               href="https://github.com/ManvithaDungi"
@@ -104,17 +68,9 @@ function Contact() {
             >
               github.com/ManvithaDungi
             </a>
-          </motion.div>
+          </div>
 
-          {/* Contact Form */}
-          <motion.form
-            ref={form}
-            onSubmit={sendEmail}
-            className="contact-form"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-          >
+          <form ref={form} onSubmit={sendEmail} className="contact-form">
             <input
               type="text"
               name="from_name"
@@ -133,15 +89,9 @@ function Contact() {
               placeholder="Your Message"
               required
             ></textarea>
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Send Message
-            </motion.button>
-          </motion.form>
-        </motion.section>
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
       </div>
     </>
   );
