@@ -1,254 +1,272 @@
+/* === About.css (Final Updated) === */
+
 :root {
-  --dark-color: hsl(217, 44%, 17%);
-  --accent-color: #cce1ff;
-  --highlight-color: #1bf392;
-  --heading-color: #ffffff;
+  --depth: #030f18;
+  --glacier: #72a3bf;
+  --harbor: #1d4052;
+  --marine: #446e87;
+  --frost: #e0e8e6;
+}
+/* Fix spacing */
+.section-container {
+  margin-bottom: 5rem;
 }
 
-/* Reset & Base */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: Verdana;
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: var(--dark-color);
-  color: var(--accent-color);
+.wrapper {
+  background: var(--depth);
+  color: var(--frost);
+  min-height: 100vh;
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-size: 1.7rem;
+  line-height: 2.6rem;
 }
 
-a {
-  text-decoration: none;
-  color: var(--accent-color);
-  transition: color 0.3s ease;
-}
-
-/* Navbar */
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #000;
-  color: white;
+  padding: 20px 40px;
+  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.125rem;
-  color: var(--highlight-color);
-}
-
-.menu-items {
-  display: flex;
-  gap: 3.75rem;
-  text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--glacier);
+  text-decoration: none;
 }
 
 .menu-items a {
+  margin-left: 25px;
   text-decoration: none;
-  color: white;
-  font-weight: 500;
+  color: var(--frost);
+  font-size: 1.6rem;
+  transition: color 0.3s;
 }
 
 .menu-items a:hover {
-  color: #f0a500;
+  color: var(--glacier);
 }
 
-/* Layout */
-.wrapper {
-  max-width: 75rem;
-  padding: 1.5rem;
-  margin: auto;
-}
-
-.hero {
-  margin-top: 6rem;
-}
-
-h1 {
-  font-size: 4.5rem;
-  margin-bottom: 2rem;
-  color: var(--heading-color);
-  font-weight: 700;
-  text-align: center;
-}
-
-h2.section-title {
-  font-size: 3rem;
-  color: var(--heading-color);
-  text-align: left;
-  margin: 3rem 0 2rem;
-}
-
-/* Education */
-.education-section {
-  margin: 6rem 0;
-}
-
-.education-card {
-  display: flex;
-  align-items: flex-start;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 2px solid var(--highlight-color);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-  gap: 2rem;
-  max-width: 800px;
+/* ===== CONTAINERS / SECTIONS ===== */
+.section-container {
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 50px 20px;
 }
 
-.edu-logo {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  border-radius: 0.5rem;
+.section-title {
+  color: var(--frost) !important;
+  font-weight: 700;
+  text-shadow: none !important;
+  opacity: 1 !important;
 }
 
-.edu-details h3 {
-  font-size: 2rem;
-  color: var(--heading-color);
-  margin-bottom: 0.5rem;
+/* ===== TIMELINE ===== */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.edu-details p {
-  color: var(--accent-color);
-  margin: 0.3rem 0;
+.timeline-item {
+  display: flex;
+  align-items: center;
+  background: rgba(68, 110, 135, 0.15);
+  padding: 18px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-3px);
+}
+
+.timeline-icon {
+  width: 55px;
+  height: 55px;
+  background: var(--glacier);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.timeline-icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain; /* ✅ School logo fixed */
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--frost);
+}
+
+.timeline-content p {
+  margin: 3px 0;
+  color: var(--glacier);
   font-size: 1.4rem;
 }
 
-.edu-details ul {
-  margin-top: 0.8rem;
-  padding-left: 1.5rem;
+.gpa {
+  color: var(--glacier);
+  font-weight: 600;
 }
 
-.edu-details ul li {
+/* ===== SKILLS ===== */
+.skills-section {
+  margin-top: 50px;
+}
+
+.skill-subtitle {
+  margin-top: 25px;
+  font-size: 1.8rem;
+  color: var(--frost);
+  font-weight: 600;
+}
+
+.progress-bar {
+  margin: 15px 0;
+}
+
+.progress-bar span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  color: var(--frost);
+  margin-bottom: 5px;
+}
+
+.lang-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--glacier), var(--marine));
+  border-radius: 5px;
+  transition: width 1s ease;
+}
+
+/* ===== SOFT SKILLS ===== */
+.soft-skills {
+  margin-top: 50px;
+}
+
+.soft-skill {
+  display: flex;
+  align-items: center;
+  background: rgba(68, 110, 135, 0.15);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: transform 0.3s;
+}
+
+.soft-skill:hover {
+  transform: translateY(-2px);
+}
+
+.soft-skill .chip {
+  background: var(--glacier);
+  color: var(--depth);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.soft-skill p {
   font-size: 1.4rem;
-  line-height: 1.8;
-  color: var(--accent-color);
+  color: var(--frost);
 }
 
-/* Achievements */
-.achievements {
-  margin-top: 5rem;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.03);
-  border-left: 4px solid var(--highlight-color);
-  border-radius: 1rem;
+/* ===== TAGS ===== */
+.tags-section {
+  margin-top: 50px;
 }
 
-.achievement {
-  margin-bottom: 2.5rem;
-}
-
-.achievement h3 {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-  color: var(--heading-color);
-}
-
-.achievement p {
-  font-size: 1.4rem;
-  line-height: 2;
-  color: var(--accent-color);
-}
-
-/* Tech Stack Icons */
-.stack-icons {
+.tag-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  align-items: center;
-  margin-top: 1rem;
+  gap: 10px;
 }
 
-.stack-icons img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  transition: transform 0.3s ease-in-out;
-  border-radius: 6px;
-  border: none;
-  box-shadow: none;
+.chip {
+  background: rgba(114, 163, 191, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: var(--frost);
+  font-size: 1.3rem;
+  transition: background 0.3s ease;
 }
 
-.stack-icons img:hover {
-  transform: scale(1.1);
+.chip:hover {
+  background: var(--glacier);
+  color: var(--depth);
 }
 
-/* Certificate Links */
+.interest-chip {
+  background: rgba(114, 163, 191, 0.15);
+  color: var(--glacier);
+}
+
+/* ===== GALLERY ===== */
+.gallery-section {
+  margin-top: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(68, 110, 135, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--frost);
+}
+
+.card p {
+  color: var(--glacier);
+  font-size: 1.4rem;
+}
+
 .glow-link {
-  color: var(--highlight-color);
-  font-weight: bold;
-  transition: 0.3s ease;
-  display: inline-block;
+  color: var(--glacier);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .glow-link:hover {
-  transform: scale(1.03);
-}
-
-.click-note {
-  font-size: 1.2rem;
-  color: var(--accent-color);
-  opacity: 0.7;
-  margin-top: 0.3rem;
-}
-
-.sub-heading {
-  font-size: 1.8rem;
-  color: var(--heading-color);
-  margin-top: 1.5rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .wrapper {
-    padding: 1rem;
-  }
-
-  .menu-items {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-    margin-top: 1rem;
-  }
-
-  .menu-items a {
-    font-size: 1.4rem;
-  }
-
-  h1 {
-    font-size: 2.8rem;
-    text-align: center;
-  }
-
-  h2.section-title {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .education-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .edu-logo {
-    margin-bottom: 1rem;
-  }
+  text-decoration: underline;
 }

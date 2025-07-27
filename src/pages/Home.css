@@ -1,10 +1,12 @@
+/* Home.css - Updated Color Palette with Transparent Navbar */
 :root {
-  --dark-color: hsl(217, 44%, 17%);
-  --accent-color: #cce1ff;
-  --highlight-color: #1bf392;
+  --dark-color: #030f18; /* depth */
+  --accent-color: #e0e8e6; /* frost */
+  --highlight-color: #72a3bf; /* glacier */
+  --secondary-color: #446e87; /* marine */
 }
 
-/* Reset & Base Styles */
+/* Reset & Base */
 *,
 *::before,
 *::after {
@@ -22,13 +24,13 @@ body {
   background-color: var(--dark-color);
   color: var(--accent-color);
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-size: 1.7rem;
+  line-height: 2.6rem;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--accent-color);
   transition: color 0.3s ease-in-out;
 }
 
@@ -38,36 +40,53 @@ a {
   margin: auto;
 }
 
-/* ========== NAVIGATION ========== */
+/* ========== NAVIGATION (Transparent) ========== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #000;
-  color: white;
+  background: transparent; /* removed background color */
+  color: var(--accent-color);
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
   color: var(--highlight-color);
+  font-weight: bold;
 }
 
 .menu-items {
   display: flex;
   gap: 3.75rem;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .menu-items a {
   font-weight: 500;
+  position: relative;
+}
+
+.menu-items a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--highlight-color);
+  transition: width 0.3s ease-in-out;
 }
 
 .menu-items a:hover {
   color: var(--highlight-color);
+}
+
+.menu-items a:hover::after {
+  width: 100%;
 }
 
 /* ========== HERO SECTION ========== */
@@ -93,12 +112,17 @@ nav {
 }
 
 .right-section {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(68, 110, 135, 0.15); /* marine tint */
   padding: 2rem;
   border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(224, 232, 230, 0.15);
   backdrop-filter: blur(6px);
   max-width: 350px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.right-section:hover {
+  transform: translateY(-5px);
 }
 
 .right-section .achievement:not(:last-child) {
@@ -107,29 +131,31 @@ nav {
 
 /* Headings */
 h1 {
-  font-size: 4.5rem;
+  display: block;
+  line-height: 1.2; /* ✅ Important */
+  font-size: 4.6rem;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: var(--accent-color);
   font-weight: 700;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.1rem;
   word-spacing: 0.1rem;
 }
 
 h2.role {
-  font-size: 2.4rem;
-  color: #ffffff;
+  font-size: 2.6rem;
+  color: var(--highlight-color);
   margin-bottom: 2rem;
 }
 
 h3 {
-  font-size: 1.8rem;
-  color: #ffffff;
+  font-size: 2rem;
+  color: var(--accent-color);
   margin-bottom: 0.5rem;
 }
 
 .sub-heading p {
   margin-bottom: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--accent-color);
   opacity: 0.9;
 }
@@ -146,6 +172,7 @@ h3 {
   width: 35px;
   height: auto;
   transition: transform 0.3s ease-in-out;
+  filter: drop-shadow(0 0 4px rgba(114, 163, 191, 0.4));
 }
 
 .github-icon {
@@ -158,20 +185,20 @@ h3 {
 
 /* ========== QUOTES ========== */
 .quote-box {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(68, 110, 135, 0.15);
   border-left: 6px solid var(--highlight-color);
   padding: 2rem 2.5rem;
   margin: 3rem 0;
   font-style: italic;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--accent-color);
   border-radius: 12px;
   line-height: 1.8;
 }
 
 .quote-box.quote {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   padding: 1.8rem 2rem;
   line-height: 1.6;
   max-width: 500px;
@@ -180,26 +207,29 @@ h3 {
 /* ========== BUTTONS ========== */
 .btn {
   display: inline-flex;
-  background-color: white;
+  background-color: var(--highlight-color);
   color: var(--dark-color);
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  padding: 0.75rem 1rem;
+  padding: 0.9rem 1.3rem;
   text-transform: uppercase;
   align-items: center;
+  cursor: pointer;
   gap: 0.5rem;
   margin-top: 2rem;
-  transition: transform 0.3s ease-in-out;
   border-radius: 0.5rem;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .btn:hover {
   transform: translateY(-3px);
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 .btn .icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 /* ========== TECH STACK ICONS ========== */
@@ -236,8 +266,8 @@ h3 {
   height: 220px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(114, 163, 191, 0.25);
+  border: 4px solid rgba(224, 232, 230, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -245,7 +275,7 @@ h3 {
   transform: scale(1.05);
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
   .hero-content {
     flex-direction: column;
@@ -266,16 +296,16 @@ h3 {
   }
 
   .menu-items a {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     text-align: center;
   }
 
   h2.role {
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -296,10 +326,5 @@ h3 {
 
   .wrapper {
     padding: 1rem;
-  }
-
-  .contact-container {
-    margin: 2rem auto;
-    padding: 1.5rem;
   }
 }
