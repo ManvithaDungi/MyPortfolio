@@ -1,75 +1,88 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Manvitha Dungi – Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **personal portfolio website** built using **React.js** to showcase projects, skills, and professional experience. The design is minimalistic, responsive, and optimized for smooth animations using **Framer Motion**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Responsive Design** – Works seamlessly across devices (mobile, tablet, desktop).  
+- **Smooth Animations** – Implemented using **Framer Motion** for a dynamic user experience.  
+- **Project Showcase** – Displays detailed descriptions, tech stack, and links to repositories.  
+- **Resume Viewer** – View/download the resume directly from the site.  
+- **Contact Information & Social Links** – Easy navigation to LinkedIn, GitHub, and Email.  
+- **Optimized Performance** – Lightweight and fast loading.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **Frontend:** React.js, React Router, Framer Motion  
+- **Styling:** CSS3 (Custom, with modern design principles)  
+- **Deployment:** GitHub 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+portfolio/
+│
+├── public/
+│   ├── images/        # Social icons, profile photo, tech stack icons      
+│   └── certificates/  # Certifications (if any)
+│
+├── src/
+│   ├── pages/
+│   │   ├── Home.js
+│   │   ├── About.js
+│   │   ├── Projects.js
+│   │   ├── Contact.js
+│   │   └── Resume.js
+│   ├── App.js
+│   ├── index.js
+│   └── styles/        # CSS files (Home.css, About.css, etc.)
+│
+└── package.json
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚡ Getting Started
 
-### `npm run eject`
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/ManvithaDungi/portfolio.git
+cd portfolio
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3️⃣ Run the development server
+```bash
+npm start
+```
+The app will run on **http://localhost:3000/**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4️⃣ Build for production
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📸 Preview
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[My Portfolio Screenshot](public/images/portfolio.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📬 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# MyPortfolio
-Portfolio using reactJS
->>>>>>> abfc6d44f18bdb270e5342cf3da51e321b879268
+👩‍💻 **Manvitha Dungi**  
+📧 Email: [manvitha3626@gmail.com](mailto:manvitha3626@gmail.com)  
+🔗 LinkedIn: [Manvitha Dungi](https://www.linkedin.com/in/manvitha-dungi-8a8040211/)  
+💻 GitHub: [ManvithaDungi](https://github.com/ManvithaDungi)
