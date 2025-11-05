@@ -32,12 +32,13 @@ function Projects() {
             </div>
             <div className="project-content">
               <h3>Social Timeline App</h3>
+              <p><strong>Description:</strong> A social media-event management hybrid platform that allows users to share their thoughts and connect with others based on events they attended.</p>
               <p><strong>Stack:</strong> MERN (MongoDB, Express, React, Node.js)</p>
               <p><strong>Features:</strong> User authentication, image uploads, real-time collaboration</p>
               <p>
                 <strong>Repository:</strong>
                 <a
-                  href="https://github.com/ManvithaDungi/Social-Timeline-App"
+                  href="https://github.com/ManvithaDungi/Zynk"
                   className="glow-link"
                   target="_blank"
                   rel="noreferrer"
@@ -85,10 +86,7 @@ function Projects() {
           {/* Project 3 */}
           <div className="project-card">
             <div className="project-image">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/drone.png`}
-                alt="Drone Flight Controller Simulation"
-              />
+              <img src={`${process.env.PUBLIC_URL}/images/drone.png`} alt="Drone Flight Controller Simulation" />
             </div>
             <div className="project-content">
               <h3>Drone Flight Controller Simulation</h3>
