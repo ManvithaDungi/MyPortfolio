@@ -1,239 +1,132 @@
-:root {
-  --dark-color: #030f18; /* depth */
-  --accent-color: #e0e8e6; /* frost */
-  --highlight-color: #72a3bf; /* glacier */
-  --heading-color: #1d4052; /* harbor */
-  --card-bg: rgba(68, 110, 135, 0.15); /* marine tint */
-}
-
-/* Reset & Base */
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: var(--dark-color);
-  color: var(--accent-color);
-  font-size: 1.7rem;
-  line-height: 2.6rem;
-}
-
-a {
-  text-decoration: none;
-  color: var(--accent-color);
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: var(--highlight-color);
-  text-shadow: 0 0 5px var(--highlight-color);
-}
-
+/* Layout */
 .wrapper {
-  max-width: 75rem;
-  padding: 1.5rem;
+  max-width: 1200px;
   margin: auto;
+  padding: 2rem;
 }
 
-/* ===== NAVBAR (Transparent) ===== */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: transparent;
-  color: var(--accent-color);
-}
-
-.logo {
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.125rem;
-  color: var(--highlight-color);
-  font-weight: bold;
-}
-
-.menu-items {
-  display: flex;
-  gap: 3rem;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
-
-.menu-items a {
-  text-decoration: none;
-  color: var(--accent-color);
-  font-weight: 500;
-}
-
-.menu-items a:hover {
-  color: var(--highlight-color);
-}
-
-/* ===== HEADINGS & HERO ===== */
-.hero {
-  margin-top: 6rem;
-  position: relative;
-}
-
-h1 {
-  font-size: 4.6rem;
-  color: var(--accent-color);
-  margin-bottom: 3rem;
-  text-align: left;
-}
-
-.section-title {
-  font-size: 3.2rem;
-  color: var(--heading-color);
-  margin-bottom: 2rem;
-  text-align: center;
-  text-shadow: 0 0 6px rgba(114, 163, 191, 0.4);
-}
-
-/* ===== PROJECT SECTION ===== */
 .section {
   margin-bottom: 5rem;
 }
 
-.project-card,
-.internship-card {
-  background-color: var(--card-bg);
-  border: 1px solid rgba(224, 232, 230, 0.15);
-  padding: 2rem;
-  border-radius: 1rem;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 0 15px rgba(114, 163, 191, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+h1 {
+  font-size: 3.6rem;
+  margin-bottom: 3rem;
 }
 
-.project-card:hover,
-.internship-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(114, 163, 191, 0.3);
+h2 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
 }
 
-.project-card h3,
-.internship-card h3 {
-  font-size: 2rem;
-  color: var(--highlight-color);
-  margin-bottom: 1rem;
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  gap: 2.5rem;
 }
 
-.project-card p,
-.internship-card p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-  color: var(--accent-color);
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.project-tag {
-  background-color: rgba(114, 163, 191, 0.15);
-  color: var(--highlight-color);
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 1.3rem;
-}
-
-.project-links a {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
-  color: var(--accent-color);
-}
-
-.project-links a:hover {
-  color: var(--highlight-color);
-  text-shadow: 0 0 4px var(--highlight-color);
-}
-
-/* ===== Project Images ===== */
+/* Project Card */
 .project-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 1.6rem;
   display: flex;
-  align-items: flex-start;
-  gap: 2rem;
+  flex-direction: column;
+  height: 100%;
 }
 
-.project-image img {
-  width: 180px;
-  height: 120px;
+.project-image {
+  width: 100%;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px var(--highlight-color);
 }
 
 .project-content {
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 600px) {
-  .hero {
-    margin-top: 3rem;
-  }
+.project-stack {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin: 0.6rem 0 1rem;
+}
 
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-  }
+/* Tabs */
+.project-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
 
-  .section-title {
-    font-size: 2.6rem;
-  }
+.project-tabs button {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+}
 
-  .wrapper {
-    padding: 1rem;
-  }
+.project-tabs .active {
+  background: rgba(114,163,191,0.35);
+}
 
-  .menu-items {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-    margin-top: 1rem;
-  }
+/* Tab Content */
+.project-tab-content {
+  flex: 1;
+  font-size: 1.35rem;
+}
 
-  .menu-items a {
-    font-size: 1.4rem;
-  }
+.project-tab-content ul {
+  padding-left: 1.2rem;
+}
 
-  .project-card,
-  .internship-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-  }
+.project-tab-content li {
+  margin-bottom: 0.4rem;
+}
 
-  .project-image img {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-  }
+/* Links */
+.project-link {
+  margin-top: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
 
-  .project-content {
-    text-align: center;
-  }
+/* Currently Building */
+.building-card {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.badge {
+  display: inline-block;
+  background: #72a3bf;
+  color: #000;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Internship */
+.internship-card {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 12px;
 }

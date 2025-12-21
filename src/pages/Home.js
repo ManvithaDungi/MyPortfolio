@@ -41,23 +41,29 @@ const TechStackIcons = () => (
 );
 
 function Home() {
+  const languages = [
+    { name: "Python", icon: "python-icon.png", level: "90%" },
+    { name: "C++", icon: "c-icon.png", level: "75%" },
+    { name: "Java", icon: "java-icon.png", level: "80%" },
+    { name: "JavaScript", icon: "js-icon.png", level: "85%" }
+  ];
+
+  const webDev = [
+    { name: "React", icon: "react-icon.png", level: "80%" },
+    { name: "MongoDB", icon: "mongodb-icon.png", level: "70%" }
+  ];
+
+  const tools = [
+    { name: "Git & GitHub", icon: "github.png", level: "85%" },
+  ];
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
     <div className="wrapper">
-      <motion.nav
-        className="navbar"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <Link to="/" className="logo">My Portfolio</Link>
-        <div className="menu-items">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-      </motion.nav>
-
       <header className="hero">
         <div className="hero-content">
           <MotionDiv
@@ -77,6 +83,7 @@ function Home() {
               <div className="tagline-box">$git it done</div>
             </MotionDiv>
             <MotionDiv className="sub-heading" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
+              <p>Final-year CSE student focused on full-stack development & system design</p>
               <p>Invested in continuously learning and growing both personally and professionally.</p>
               <p>Always pushing beyond my comfort zone—because that is where growth happens.</p>
             </MotionDiv>
@@ -128,6 +135,118 @@ function Home() {
           </MotionDiv>
         </div>
       </header>
+
+      {/* Technical Skills Section */}
+      <section className="skills-section-home">
+        <MotionDiv
+          className="skills-container"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.h2 
+            className="section-title-home"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            Technical Skills
+          </motion.h2>
+
+          <div className="skills-grid">
+            <div className="skill-category">
+              <h3 className="skill-subtitle-home">Programming Languages</h3>
+              {languages.map((skill, i) => (
+                <motion.div
+                  key={i}
+                  className="progress-bar-home"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <span>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/${skill.icon}`}
+                      alt={skill.name}
+                      className="lang-icon-home"
+                    />
+                    {skill.name}
+                  </span>
+                  <div className="bar-home">
+                    <motion.div
+                      className="fill-home"
+                      initial={{ width: "0%" }}
+                      whileInView={{ width: skill.level }}
+                      transition={{ duration: 1 }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="skill-category">
+              <h3 className="skill-subtitle-home">Web Development</h3>
+              {webDev.map((skill, i) => (
+                <motion.div
+                  key={i}
+                  className="progress-bar-home"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <span>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/${skill.icon}`}
+                      alt={skill.name}
+                      className="lang-icon-home"
+                    />
+                    {skill.name}
+                  </span>
+                  <div className="bar-home">
+                    <motion.div
+                      className="fill-home"
+                      initial={{ width: "0%" }}
+                      whileInView={{ width: skill.level }}
+                      transition={{ duration: 1 }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="skill-category">
+              <h3 className="skill-subtitle-home">Tools</h3>
+              {tools.map((skill, i) => (
+                <motion.div
+                  key={i}
+                  className="progress-bar-home"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <span>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/${skill.icon}`}
+                      alt={skill.name}
+                      className="lang-icon-home"
+                    />
+                    {skill.name}
+                  </span>
+                  <div className="bar-home">
+                    <motion.div
+                      className="fill-home"
+                      initial={{ width: "0%" }}
+                      whileInView={{ width: skill.level }}
+                      transition={{ duration: 1 }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </MotionDiv>
+      </section>
     </div>
   );
 }

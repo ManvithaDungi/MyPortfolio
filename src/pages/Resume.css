@@ -11,3 +11,71 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large Screens (1440px+) */
+@media (min-width: 1440px) {
+  .resume-container {
+    max-width: 1200px;
+    padding: 30px;
+  }
+
+  .resume-viewer {
+    height: 85vh;
+  }
+}
+
+/* Laptop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .resume-container {
+    max-width: 1100px;
+    padding: 25px;
+  }
+
+  .resume-viewer {
+    height: 88vh;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .resume-container {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .resume-viewer {
+    height: 85vh;
+    border-radius: 8px;
+  }
+}
+
+/* Mobile (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .resume-container {
+    max-width: 100%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .resume-viewer {
+    height: 80vh;
+    border-radius: 6px;
+  }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .resume-container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .resume-viewer {
+    height: 75vh;
+    border-radius: 4px;
+  }
+}

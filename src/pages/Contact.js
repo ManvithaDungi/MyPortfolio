@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Contact.css';
 
@@ -31,21 +30,6 @@ function Contact() {
 
   return (
     <div className="wrapper">
-      <motion.nav
-        className="navbar"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <Link to="/" className="logo">My Portfolio</Link>
-        <div className="menu-items">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-      </motion.nav>
-
       <motion.header
         className="contact-hero"
         initial={{ opacity: 0 }}

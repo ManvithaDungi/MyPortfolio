@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./About.css";
 
@@ -36,22 +35,6 @@ function About() {
 
   return (
     <div className="wrapper">
-      {/* Navbar */}
-      <motion.nav
-        className="navbar"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <Link to="/" className="logo">My Portfolio</Link>
-        <div className="menu-items">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-      </motion.nav>
-
       <header className="hero">
         <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
           About Me

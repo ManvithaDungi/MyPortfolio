@@ -11,3 +11,98 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Navbar Transitions */
+.nav-link-underline {
+  @apply relative py-2 transition-all duration-300 ease-in-out;
+}
+
+.nav-link-underline::after {
+  @apply content-[''] absolute left-0 bottom-0 w-0 h-0.5 bg-gray-600 
+    transition-all duration-300 ease-in-out origin-center;
+}
+
+.nav-link-underline:hover::after {
+  @apply w-full;
+}
+
+/* Navbar Styles */
+.navbar {
+  @apply fixed top-0 w-full z-50 transition-all duration-300;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-scrolled {
+  @apply shadow-lg;
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Navigation Links */
+.nav-link {
+  @apply relative inline-block py-2 px-1 text-gray-600 transition-colors duration-300;
+}
+
+.nav-link:hover {
+  @apply text-gray-900;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 ease-in-out;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.nav-link.active {
+  @apply text-gray-900 font-medium;
+}
+
+.nav-link.active::after {
+  @apply w-full;
+}
+
+/* Mobile Menu Animation */
+.mobile-menu-enter {
+  @apply transform -translate-y-full opacity-0;
+}
+
+.mobile-menu-enter-active {
+  @apply transform translate-y-0 opacity-100 transition-all duration-300 ease-out;
+}
+
+.mobile-menu-exit {
+  @apply transform translate-y-0 opacity-100;
+}
+
+.mobile-menu-exit-active {
+  @apply transform -translate-y-full opacity-0 transition-all duration-300 ease-in;
+}
+
+/* Hamburger Menu */
+.hamburger-line {
+  @apply block h-0.5 w-full bg-gray-600 transition-all duration-300 ease-in-out;
+}
+
+.hamburger-active .hamburger-line:first-child {
+  @apply rotate-45 translate-y-2;
+}
+
+.hamburger-active .hamburger-line:nth-child(2) {
+  @apply opacity-0;
+}
+
+.hamburger-active .hamburger-line:last-child {
+  @apply -rotate-45 -translate-y-2;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
