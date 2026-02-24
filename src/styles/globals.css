@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --color-bg: #0D0D0F;
+  /* near black, not pure */
+  --color-bg-2: #13131A;
+  /* card backgrounds */
+  --color-bg-3: #1C1C28;
+  /* elevated surfaces */
+  --color-white: #F0EEF8;
+  /* off-white, slightly purple */
+  --color-muted: #A1A1AA;
+  /* secondary text - lightened for WCAG contrast */
+
+  --color-primary: #7B61FF;
+  /* electric violet — main accent */
+  --color-glow: #A78BFA;
+  /* lighter violet for glows */
+  --color-red: #FF4C6A;
+  /* anime red — danger/highlight */
+  --color-cyan: #00FFD1;
+  /* terminal cyan — secondary accent */
+  --color-yellow: #FFD166;
+  /* warm accent pop */
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Bebas Neue', sans-serif;
+  /* hero/display only */
+
+  --glow-primary: 0 0 20px rgba(123, 97, 255, 0.4);
+  --glow-cyan: 0 0 20px rgba(0, 255, 209, 0.3);
+  --glow-red: 0 0 20px rgba(255, 76, 106, 0.4);
+
+  --border: 1px solid rgba(123, 97, 255, 0.2);
+  --border-glow: 1px solid rgba(123, 97, 255, 0.6);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px,
+      transparent 2px);
+  opacity: 0.03;
+  z-index: 9999;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Watermark Text */
+.watermark {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 20vw, 20rem);
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.05;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.watermark-katakana {
+  font-family: system-ui, sans-serif;
+  /* fallback */
+}
